@@ -39,17 +39,11 @@ public class FileManager extends JFrame {
 
 	private JPanel FileListPanel;
 	private JPanel DirListPanel;
-	private JPanel mainPanel;
 	private JLabel title;
 	private JTextArea descr;
 	private Font textFont;
 	private Font titleFont;
 	private File currentFile;
-	private JMenuItem jmiCopyFile;
-	private JMenuItem jmiCopyDir;
-	private JMenuItem jmiPasteFile;
-	private JMenuItem jmiPasteDir;
-	private JMenuItem jmiExit;
 
 	private File fileFrom;
 	private File dirFrom;
