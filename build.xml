@@ -1,0 +1,29 @@
+<project name="FileManager" default="all">
+
+	<target name="makedir" description="making build folder">
+		<mkdir dir="build/classes" />
+	</target>
+
+
+	<target name="compile" depends="makedir" description="compiling byte-code">
+		<javac includeantruntime="false" destdir="build/classes">
+			<src path = "src" />
+		</javac>
+	</target>
+
+	<target name="makejar" depends="compile" description="making jar file">
+		<jar destfile="build/FileManager.jar">
+			<manifest>
+				<attribute name="Main-Class" value="filemanager.FileManager" />
+			</manifest>
+			<fileset dir="build/classes">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="all" depends="makejar" description="last target">
+		<echo> Building my first Ant project </echo>
+	</target>
+
+</project>
